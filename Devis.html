@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demander un devis - Agence de Transport</title>
+    <style>
+        /* CSS du formulaire */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .devis-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        h2 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="email"],
+        .form-group input[type="tel"],
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1em;
+            box-sizing: border-box; /* Pour que le padding n'augmente pas la taille */
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: #3498db;
+            outline: none;
+            box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+        }
+
+        button.submit-button {
+            width: 100%;
+            padding: 15px;
+            background-color: #e67e22;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        button.submit-button:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="devis-container">
+    <h2>Demande de Devis</h2>
+    <form action="mailto:votre_email@example.com" method="post" enctype="text/plain">
+
+        <div class="form-group">
+            <label for="nom">Nom & Prénom</label>
+            <input type="text" id="nom" name="Nom" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="Email" required>
+        </div>
+
+        <div class="form-group">
+            <label for="telephone">Téléphone</label>
+            <input type="tel" id="telephone" name="Téléphone">
+        </div>
+        
+        <div class="form-group">
+            <label for="type-transport">Type de transport</label>
+            <select id="type-transport" name="Type de transport">
+                <option value="terrestre">Terrestre</option>
+                <option value="aerien">Aérien</option>
+                <option value="maritime">Maritime</option>
+                <option value="autre">Autre (précisez dans le message)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="details">Détails de votre envoi (dimensions, poids, destination, etc.)</label>
+            <textarea id="details" name="Détails de l'envoi" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-button">Envoyer la demande de devis</button>
+
+    </form>
+</div>
+
+</body>
+</html>

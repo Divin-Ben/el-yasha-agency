@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Agence de Transport</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Styles de base */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Styles de la section contact */
+        .contact-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .contact-section h2 {
+            text-align: center;
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .contact-section p.subtitle {
+            text-align: center;
+            font-size: 1.1em;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            box-shadow: 0 5px 30px rgba(0,0,0,0.08);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .contact-form-container {
+            padding: 40px;
+            background-color: #f1f3f5;
+        }
+        
+        .contact-info-container {
+            padding: 40px;
+            background-color: #2c3e50;
+            color: white;
+            position: relative;
+        }
+        
+        /* Formulaire de contact */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1em;
+        }
+        
+        .contact-form textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #e67e22;
+            outline: none;
+        }
+        
+        .contact-form button {
+            background-color: #e67e22;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .contact-form button:hover {
+            background-color: #d35400;
+            transform: translateY(-2px);
+        }
+        
+        /* Informations de contact */
+        .contact-info-container h3 {
+            font-size: 1.8em;
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #f1c40f; /* Couleur d'accent */
+        }
+        
+        .contact-details {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        
+        .contact-details li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1em;
+        }
+        
+        .contact-details li i {
+            color: #e67e22;
+            font-size: 1.5em;
+        }
+        
+        .contact-details a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-details a:hover {
+            color: #e67e22;
+        }
+        
+        /* Carte Google Maps */
+        .map-container {
+            margin-top: 40px;
+            position: relative;
+            height: 250px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 992px) {
+            .contact-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .contact-section {
+                padding: 60px 0;
+            }
+            .contact-section h2 {
+                font-size: 2em;
+            }
+            .contact-section p.subtitle {
+                font-size: 1em;
+                margin-bottom: 40px;
+            }
+            .contact-form-container, .contact-info-container {
+                padding: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contactez-nous</h2>
+            <p class="subtitle">
+                Nous sommes à votre écoute pour répondre à toutes vos questions et vous fournir un devis personnalisé.
+            </p>
+            <div class="contact-content">
+                
+                <div class="contact-form-container">
+                    <form action="mailto:el_yashaagency@gmail.com" method="post" enctype="text/plain" class="contact-form">
+                        <input type="text" name="Nom" placeholder="Votre nom" required>
+                        <input type="email" name="Email" placeholder="Votre email" required>
+                        <input type="tel" name="Téléphone" placeholder="Votre téléphone">
+                        <textarea name="Message" placeholder="Votre message..." required></textarea>
+                        <button type="submit">Envoyer le message</button>
+                    </form>
+                </div>
+                
+                <div class="contact-info-container">
+                    <h3>Informations de Contact</h3>
+                    <ul class="contact-details">
+                        <li><i class="fas fa-map-marker-alt"></i> <span>Q. HIMBI, Av Du Lac Kivu N° 148, Goma Rd Congo</span></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:el_yashaagency@gmail.com">el_yashaagency@gmail.com</a></li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:+243 971 317 791">+243 971 317 791</a></li>
+                        <li><i class="fas fa-clock"></i> <span>Du lundi au vendredi, 9h00 - 18h00</span></li>
+                    </ul>
+                    
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15951.642848984898!2d29.222229047119215!3d-1.6743609219033734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19e3222b2d7c7cd9%3A0x2cc1a1e69a10e0dd!2sGoma!5e0!3m2!1sfr!2scd!4v1715970900000!5m2!1sfr!2scd" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

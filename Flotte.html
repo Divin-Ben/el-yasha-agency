@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flotte - Agence de Transport</title>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Styles de base de la section */
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Styles de la section Flotte */
+        .flotte-section {
+            padding: 80px 0;
+            background-color: white;
+            text-align: center;
+        }
+        
+        .flotte-section h2 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 2.5em;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+        
+        .flotte-section p.subtitle {
+            font-size: 1.1em;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .flotte-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            justify-content: center;
+        }
+        
+        /* Styles des éléments de la flotte */
+        .flotte-item {
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        
+        .flotte-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .flotte-item .flotte-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        .flotte-item:hover .flotte-image {
+            transform: scale(1.1);
+        }
+        
+        .flotte-item .flotte-details {
+            padding: 25px;
+        }
+        
+        .flotte-item .flotte-details h3 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.8em;
+            font-weight: 600;
+            color: #e67e22; /* Couleur d'accent */
+            margin: 0 0 10px;
+        }
+        
+        .flotte-item .flotte-details p {
+            font-size: 1em;
+            color: #555;
+            margin: 0;
+        }
+        
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .flotte-section {
+                padding: 60px 0;
+            }
+            .flotte-section h2 {
+                font-size: 2em;
+            }
+            .flotte-section p.subtitle {
+                font-size: 1em;
+                margin-bottom: 40px;
+            }
+            .flotte-container {
+                gap: 20px;
+                grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section id="flotte" class="flotte-section">
+        <div class="container">
+            <h2>Notre Flotte à Votre Service</h2>
+            <p class="subtitle">
+                Nous disposons d'une flotte de véhicules modernes et performants, entretenus selon les standards les plus élevés pour garantir la sécurité et la fiabilité de vos envois.
+            </p>
+            <div class="flotte-container">
+                
+                <div class="flotte-item">
+                    <img src="./Sp.webp" alt="Camion Poids Lourd" class="flotte-image">
+                    <div class="flotte-details">
+                        <h3>Camions Poids Lourds</h3>
+                        <p>Idéaux pour les transports longue distance et les cargaisons volumineuses. Capacités de 20 tonnes.</p>
+                    </div>
+                </div>
+                
+                <div class="flotte-item">
+                    <img src="./OIP.webp" alt="Fourgon de livraison" class="flotte-image">
+                    <div class="flotte-details">
+                        <h3>Véhicules Utilitaires</h3>
+                        <p>Parfaits pour les livraisons urbaines et les petites marchandises. Rapidité et agilité garanties.</p>
+                    </div>
+                </div>
+                
+                <div class="flotte-item">
+                    <img src="./R.jpg" alt="Camion frigorifique" class="flotte-image">
+                    <div class="flotte-details">
+                        <h3>Transport Frigorifique</h3>
+                        <p>Véhicules spécialisés pour les produits nécessitant un contrôle de la température. Chaîne du froid assurée.</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

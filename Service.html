@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Agence de Transport</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        /* Styles de base */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Styles de la section services */
+        .services-section {
+            padding: 80px 0;
+            text-align: center;
+            background-color: white;
+        }
+
+        .services-section h2 {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .services-section p.subtitle {
+            font-size: 1.1em;
+            color: #6c757d;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            text-align: left;
+        }
+
+        /* Styles de la carte de service */
+        .service-card {
+            background-color: #f1f3f5;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .service-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(230, 126, 34, 0.1), rgba(52, 152, 219, 0.1));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.4s ease-in-out;
+            z-index: 0;
+        }
+        
+        .service-card:hover::after {
+            transform: scaleX(1);
+        }
+
+        .service-card .content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .service-card .icon {
+            font-size: 3em;
+            color: #e67e22; /* Couleur d'accent */
+            margin-bottom: 25px;
+            transition: color 0.3s;
+        }
+        
+        .service-card:hover .icon {
+            color: #3498db; /* Changement de couleur au survol */
+        }
+
+        .service-card h3 {
+            font-size: 1.5em;
+            font-weight: 600;
+            margin-top: 0;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        .service-card p {
+            font-size: 1em;
+            color: #666;
+            margin-bottom: 0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .services-section {
+                padding: 60px 0;
+            }
+            .services-section h2 {
+                font-size: 2em;
+            }
+            .services-section p.subtitle {
+                font-size: 1em;
+                margin-bottom: 40px;
+            }
+            .services-container {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <section id="services" class="services-section">
+        <div class="container">
+            <h2>Nos Solutions de Transport</h2>
+            <p class="subtitle">
+                Nous offrons une gamme complète de services logistiques, conçus pour répondre à tous vos besoins. De l'expédition locale à l'international, nous gérons tout avec efficacité et professionnalisme.
+            </p>
+            <div class="services-container">
+                
+                <div class="service-card">
+                    <div class="content">
+                        <i class="fas fa-truck-fast icon"></i>
+                        <h3>Transport Routier</h3>
+                        <p>
+                            Des solutions de transport terrestre fiables pour vos marchandises, qu'elles soient volumineuses ou délicates. Livraison rapide et sécurisée.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="content">
+                        <i class="fas fa-plane-departure icon"></i>
+                        <h3>Fret Aérien</h3>
+                        <p>
+                            Pour les envois urgents et à longue distance, notre service de fret aérien garantit une rapidité et une efficacité inégalées, partout dans le monde.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="content">
+                        <i class="fas fa-ship icon"></i>
+                        <h3>Fret Maritime</h3>
+                        <p>
+                            Transport de conteneurs de toutes tailles par voie maritime. Nous gérons toute la logistique pour un transit sans encombre.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="content">
+                        <i class="fas fa-warehouse icon"></i>
+                        <h3>Logistique & Entreposage</h3>
+                        <p>
+                            Gestion complète de votre chaîne d'approvisionnement, de l'entreposage à la distribution, pour une efficacité optimale.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="content">
+                        <i class="fas fa-map-marker-alt icon"></i>
+                        <h3>Suivi en Temps Réel</h3>
+                        <p>
+                            Gardez un œil sur votre cargaison à chaque étape de son voyage grâce à notre système de suivi en temps réel.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="service-card">
+                    <div class="content">
+                        <i class="fas fa-file-invoice-dollar icon"></i>
+                        <h3>Dédouanement</h3>
+                        <p>
+                            Nous nous occupons de toutes les formalités douanières, vous assurant un passage de frontières rapide et sans tracas.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
